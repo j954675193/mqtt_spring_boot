@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tj_project?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+  application:
+    name: provider
+    #MQTT配置信息
+  mqtt:
+    #MQTT服务地址
+    url: tcp://127.0.0.1:11883
+    #用户名
+    username: demo
+    #密码
+    password: 123456
+    #客户端id(不能重复)
+    client:
+      id: pub001
+    #MQTT默认的消息推送主题，实际可在调用接口是指定
+    default:
+      topic: topic
+
+server:
+  port: 8080
+
+mybatis:
+  type-aliases-package: com.example.bootmybatis
